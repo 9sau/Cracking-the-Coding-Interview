@@ -3,15 +3,18 @@ public class StringCompression {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String input = "abcdef";
+		String input = "aaabbbbbbbcffffffffffffjjjjjjjjjjjjjjjjjjoooooooooo";
 
-		String output = compress(input);
+		String output = "Input String : "+input+" \nCompressed String : "+compress(input);
 		System.out.println(output);
 	}
 
 	private static String compress(String input) {
 		// TODO Auto-generated method stub
+		if (input.length() < 2)
+			return input;
 		int count = 0;
+
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < input.length() - 1; i++) {
 			count++;
